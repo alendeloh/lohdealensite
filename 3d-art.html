@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Арт - LohDeAlen</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-image: url('art-backgroung.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .content-wrapper {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+        }
+        
+        nav {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #ff0000;
+        }
+        
+        h1, h2, h3 {
+            color: #ff0000;
+            font-family: 'Arial Black', sans-serif;
+        }
+        
+        .logo {
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+        }
+        
+        .art-work {
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .art-image {
+            border: 2px solid #ff0000;
+        }
+        
+        .file-links a {
+            color: #ff0000;
+            text-decoration: none;
+            margin-right: 15px;
+            border: 1px solid #ff0000;
+            padding: 5px 10px;
+        }
+        
+        .file-links a:hover {
+            background-color: #ff0000;
+            color: black;
+        }
+        
+        .image-text-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <nav>
+            <a href="main.html">
+                <img src="logo.jpg" alt="LohDeAlen - Главная страница" class="logo" width="60" height="60">
+            </a>
+            <a href="main.html">ГЛАВНАЯ</a>
+            <a href="music.html">МУЗЫКА</a>
+            <a href="3d-art.html">3D АРТ</a>
+            <a href="contact.html">КОНТАКТЫ</a>
+        </nav>
+
+        <main>
+            <h1>> 3D АРТ</h1>
+            
+            <!-- Работа с текстом справа -->
+            <div class="image-text-container">
+                <!-- ВСТАВЬТЕ 3D РЕНДЕР ЗДЕСЬ -->
+                <img src="0001-0150.gif" alt="3D анимация Twiney" class="art-image gif-image" width="500" height="500">
+                <div>
+                    <h2>TWINEY.GIF</h2>
+                    
+                    
+                    <p>> ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ: BLENDER</p>
+                    <p>> СТИЛЬ: Cell shading</p>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Галерея работ -->
+            <h2>> ГАЛЕРЕЯ РАБОТ</h2>
+            
+            <!-- Работа 1 -->
+            <div class="art-work">
+                <img src="ec435c60-44e0-4c95-8a51-ee5027eff56b.jpg" alt="3D работа 2" class="art-image" width="400" height="400">
+                <h3>Twiney</h3>
+                <p>3d модель маскота крипто проекта twine- паучка Twiney.</p>
+                
+            </div>
+            <!-- Работа 2 -->
+            <div class="art-work">
+                <img src="bda22dee-d864-438f-ab72-f69fe2ce8791.jpg" alt="3D работа 3" class="art-image" width="400" height="400">
+                <h3>Regi ROCK</h3>
+                <p>Я уже и забыл для какого это проекта</p>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

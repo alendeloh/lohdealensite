@@ -1,0 +1,141 @@
+        <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - LohDeAlen</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        nav {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #00ff00;
+        }
+        
+        h1, h2, h3 {
+            color: #00ff00;
+            font-family: 'Arial Black', sans-serif;
+        }
+        
+        .logo {
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            margin: 30px 0;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-image {
+            flex: 1;
+        }
+        
+        .contact-image img {
+            border: 3px solid #00ff00;
+            max-width: 100%;
+        }
+        
+        .social-btn {
+            color: #00ff00;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #00ff00;
+            padding: 8px 15px;
+            display: inline-block;
+        }
+        
+        .social-btn:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+        
+        .file-link {
+            color: #00ff00;
+            text-decoration: none;
+            margin-right: 15px;
+            border: 1px solid #00ff00;
+            padding: 5px 10px;
+        }
+        
+        .file-link:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="main.html">
+            <img src="logo.jpg" alt="LohDeAlen - Главная страница" class="logo" width="60" height="60">
+        </a>
+        <a href="main.html">ГЛАВНАЯ</a>
+        <a href="music.html">МУЗЫКА</a>
+        <a href="3d-art.html">3D АРТ</a>
+        <a href="contact.html">КОНТАКТЫ</a>
+    </nav>
+
+    <main>
+        
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>> СОЦИАЛЬНЫЕ СЕТИ</h2>
+                <div class="social-grid">
+                    
+                    <a href="https://on.soundcloud.com/sMFkCPk8FMlHFyg2Xr" class="social-btn">SOUNDCLOUD</a>
+                    <a href="https://www.youtube.com/@unknownastronaut2259" class="social-btn">YOUTUBE</a>
+                    <a href="https://vk.com/plague339" class="social-btn">VK</a>
+                    <a href="https://t.me/the_tuss7" class="social-btn">TELEGRAM</a>
+                </div>
+                
+                <h2>> ДЛЯ СОТРУДНИЧЕСТВА</h2>
+                <p>> EMAIL: lohdealen@gmail.com</p>
+                <p>> TELEGRAM: @AlenDeLoh</p>
+                
+                <h2>> ДОКУМЕНТЫ</h2>
+                <div>
+                    <a href="price-list.xls" class="file-link">ПРАЙС-ЛИСТ (XLS)</a>
+                    <a href="resume.doc" class="file-link">РЕЗЮМЕ (DOC)</a>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+    </main>
+</body>
+</html>
