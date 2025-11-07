@@ -12,7 +12,7 @@
             margin: 0;
             padding: 20px;
             line-height: 1.6;
-            background-image: url('art-backgroung.jpg');
+            background-image: url('art-backgroung.jpg' );
             background-size: cover;
             background-attachment: fixed;
         }
@@ -78,6 +78,34 @@
             gap: 30px;
             margin: 30px 0;
         }
+        .numbered-list {
+            color: #ffffff;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .numbered-list li {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .square-list {
+            list-style-type: square;
+            color: #ffffff;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .square-list li {
+            margin: 8px 0;
+        }
+        
+        .list-section {
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
     </style>
 </head>
 <body>
@@ -89,7 +117,7 @@
             <a href="main.html">ГЛАВНАЯ</a>
             <a href="music.html">МУЗЫКА</a>
             <a href="3d-art.html">3D АРТ</a>
-            <a href="contact.html">КОНТАКТЫ</a>
+            <a href="contact-frames.html">КОНТАКТЫ</a>
         </nav>
 
         <main>
@@ -101,10 +129,17 @@
                 <img src="0001-0150.gif" alt="3D анимация Twiney" class="art-image gif-image" width="500" height="500">
                 <div>
                     <h2>TWINEY.GIF</h2>
+                    <p>> ПАЙПЛАЙН</p>
                     
-                    
-                    <p>> ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ: BLENDER</p>
+                    <ul class="square-list">
+                        <li>Сбор референсов: ресерч, подбор палитры цветов</li>
+                        <li>Расскадровка анимации: создание аниматика с примерными таймкодами</li>
+                        <li>Моделирование:Создание 3д модели, текстурирование, риг</li>
+                        <li>Анимация: блок аут ключевых поз, добавление плавности</li>
+                        <li>Рендеринг: покадровый рендеринг, постобработка  </li>
+                    </ul>
                     <p>> СТИЛЬ: Cell shading</p>
+
                     
                     
                 </div>

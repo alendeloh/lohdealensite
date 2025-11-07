@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #000, #111, #000);
+            border-bottom: 2px solid #00ff00;
+        }
+        .logo {
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+        }
+        /* Навигация справа от лого */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #00ff00;
+        }
+        h1 {
+            color: #00ff00;
+            margin: 0;
+            font-size: 24px;
+            font-family: 'Arial Black', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-content">
+        <!-- Лого и навигация слева -->
+        <div class="nav-container">
+            <a href="main.html" target="_top">
+                <img src="logo.jpg" alt="LohDeAlen" class="logo" width="40" height="40">
+            </a>
+            <nav>
+                <a href="main.html" target="_top">ГЛАВНАЯ</a>
+                <a href="music.html" target="_top">МУЗЫКА</a>
+                <a href="3d-art.html" target="_top">3D АРТ</a>
+                <a href="contact-frames.html" target="_top">КОНТАКТЫ</a>
+            </nav>
+        </div>
+        
+        <h1>> КОНТАКТНАЯ ИНФОРМАЦИЯ</h1>
+    </div>
+</body>
+</html>

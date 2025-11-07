@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Неоновое пространство</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #0f0;
+      font-family: monospace;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      color: #00ff00;
+      margin-top: 10px;
+      text-shadow: 0 0 10px #00ff00;
+    }
+    #space {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+  </style>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  
+  <canvas id="space"></canvas>
+
+  <script>
+    let scene, camera, renderer, stars;
+
+    function init() {
+      // Сцена
+      scene = new THREE.Scene();
+
+      // Камера
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+      camera.position.z = 400;
+
+      // Рендер
+      renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('space'), antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setClearColor(0x000000, 1);
+
+      // Геометрия звёзд (точек)
+      const starGeometry = new THREE.BufferGeometry();
+      const starCount = 2000;
+      const positions = [];
+
+      for (let i = 0; i < starCount; i++) {
+        const x = THREE.MathUtils.randFloatSpread(1000);
+        const y = THREE.MathUtils.randFloatSpread(1000);
+        const z = THREE.MathUtils.randFloatSpread(1000);
+        positions.push(x, y, z);
+      }
+
+      starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+      // Материал звёзд
+      const starMaterial = new THREE.PointsMaterial({
+        color: 0x00ff00,
+        size: 2,
+        transparent: true,
+        opacity: 0.8
+      });
+
+      // Создаём облако точек
+      stars = new THREE.Points(starGeometry, starMaterial);
+      scene.add(stars);
+
+      animate();
+      window.addEventListener('resize', onResize);
+    }
+
+    function onResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    let t = 0;
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Плавное вращение
+      stars.rotation.y += 0.0008;
+      stars.rotation.x += 0.0004;
+
+      // Медленное движение камеры
+      t += 0.001;
+      camera.position.z = 400 + Math.sin(t) * 50;
+      camera.lookAt(0, 0, 0);
+
+      renderer.render(scene, camera);
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

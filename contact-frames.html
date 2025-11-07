@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты - LohDeAlen (Фреймы)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+        }
+        frameset {
+            border: none;
+        }
+        frame {
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<!-- Разделение на 3 фрейма -->
+<frameset rows="80,*,100">
+    
+    <!-- Верхний фрейм - заголовок -->
+    <frame src="contact-header.html" name="header" scrolling="no" noresize>
+    
+    <!-- Средний фрейм разделён на 2 части -->
+    <frameset cols="40%,*">
+        
+        <!-- Левый фрейм - контактная информация -->
+        <frame src="contact-info.html" name="info" scrolling="auto">
+        
+        <!-- Правый фрейм - форма обратной связи -->
+        <frame src="contact-form.html" name="form" scrolling="auto">
+    
+    </frameset>
+    
+    <!-- Нижний фрейм - социальные сети и документы -->
+    <frame src="contact-footer.html" name="footer" scrolling="no" noresize>
+
+</frameset>
+
+<noframes>
+    <body>
+        <h1>Ваш браузер не поддерживает фреймы</h1>
+        <p>Пожалуйста, перейдите на <a href="contact.html">обычную версию страницы контактов</a></p>
+    </body>
+</noframes>
+</html>

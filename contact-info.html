@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .contact-section {
+            margin-bottom: 30px;
+        }
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .social-btn {
+            color: #00ff00;
+            text-decoration: none;
+            border: 1px solid #00ff00;
+            padding: 12px;
+            display: block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .social-btn:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+        .contact-details {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 15px;
+            border: 1px solid #00ff00;
+            margin: 10px 0;
+        }
+        .contact-details p {
+            margin: 8px 0;
+        }
+        h2 {
+            color: #00ff00;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        /* Стили для выпадающего списка */
+        .services-selector {
+            margin: 15px 0;
+        }
+        .select-wrapper {
+            position: relative;
+            margin: 10px 0;
+        }
+        .services-select {
+            width: 100%;
+            padding: 12px;
+            background: #111;
+            color: #00ff00;
+            border: 1px solid #333;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        .services-select:focus {
+            border-color: #00ff00;
+            outline: none;
+        }
+        .select-wrapper::after {
+            content: '▼';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #00ff00;
+            pointer-events: none;
+            font-size: 12px;
+        }
+        .service-details {
+            background: rgba(0, 255, 0, 0.05);
+            border: 1px solid #333;
+            padding: 15px;
+            margin: 10px 0;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .service-details.active {
+            display: block;
+        }
+        .service-price {
+            color: #00ff00;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .service-features li {
+            margin: 5px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        .service-features li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+            font-size: 10px;
+        }
+        .service-time {
+            color: #888;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-section">
+        <h2>> СОЦИАЛЬНЫЕ СЕТИ</h2>
+        <div class="social-grid">
+            <a href="https://on.soundcloud.com/sMFkCPk8FMlHFyg2Xr" class="social-btn" target="_blank">SOUNDCLOUD</a>
+            <a href="https://www.youtube.com/@unknownastronaut2259" class="social-btn" target="_blank">YOUTUBE</a>
+            <a href="https://vk.com/plague339" class="social-btn" target="_blank">VK</a>
+            <a href="https://t.me/the_tuss7" class="social-btn" target="_blank">TELEGRAM</a>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2>> УСЛУГИ ДЛЯ СОТРУДНИЧЕСТВА</h2>
+        
+        <div class="services-selector">
+            <div class="select-wrapper">
+                <select class="services-select" id="services-select" onchange="showServiceDetails(this.value)">
+                    <option value="">-- ВЫБЕРИТЕ УСЛУГУ --</option>
+                    <option value="3d_modeling">3D МОДЕЛИРОВАНИЕ</option>
+                    <option value="3d_animation">3D АНИМАЦИЯ</option>
+                    <option value="music_production">МУЗЫКАЛЬНАЯ ПРОДУКЦИЯ</option>
+                    <option value="sound_design">САУНД-ДИЗАЙН</option>
+                    <option value="visual_effects">ВИЗУАЛЬНЫЕ ЭФФЕКТЫ</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Детали по 3D моделированию -->
+        <div class="service-details" id="3d_modeling">
+            <h3>3D МОДЕЛИРОВАНИЕ</h3>
+            <div class="service-price">ОТ 5 000 ₽</div>
+            <div class="service-time">Срок: 5-14 дней</div>
+            <ul class="service-features">
+                <li>Создание 3D моделей любой сложности</li>
+                <li>Персонажи, техника, архитектура</li>
+                <li>Low-poly и High-poly модели</li>
+                <li>UV-развёртка и текстурирование</li>
+                <li>PBR материалы</li>
+                <li>Оптимизация для игр и рендера</li>
+            </ul>
+            <div class="contact-details">
+                <p>> Форматы: OBJ, FBX, BLEND, STL</p>
+                <p>> ПО: Blender, ZBrush, Substance Painter</p>
+            </div>
+        </div>
+
+        <!-- Детали по 3D анимации -->
+        <div class="service-details" id="3d_animation">
+            <h3>3D АНИМАЦИЯ</h3>
+            <div class="service-price">ОТ 8 000 ₽</div>
+            <div class="service-time">Срок: 7-21 день</div>
+            <ul class="service-features">
+                <li>Скелетная анимация персонажей</li>
+                <li>Риггинг и веса вершин</li>
+                <li>Анимация техники и механизмов</li>
+                <li>Фacial animation (мимика)</li>
+                <li>Циклы ходьбы, бега</li>
+                <li>Экспорт в игровые движки</li>
+            </ul>
+            <div class="contact-details">
+                <p>> Форматы: FBX, GLTF, BLEND</p>
+                <p>> ПО: Blender, Maya</p>
+            </div>
+        </div>
+
+        <!-- Детали по музыкальной продюссии -->
+        <div class="service-details" id="music_production">
+            <h3>МУЗЫКАЛЬНАЯ ПРОДУКЦИЯ</h3>
+            <div class="service-price">ОТ 3 000 ₽</div>
+            <div class="service-time">Срок: 3-10 дней</div>
+            <ul class="service-features">
+                <li>Создание оригинальных треков</li>
+                <li>Электронная музыка, синтвейв</li>
+                <li>Аранжировка и оркестровка</li>
+                <li>Сведение и мастеринг</li>
+                <li>Саундтреки для проектов</li>
+                <li>Работа с вокалом</li>
+            </ul>
+            <div class="contact-details">
+                <p>> Форматы: WAV, MP3, STEMS</p>
+                <p>> ПО: FL Studio, Ableton Live</p>
+            </div>
+        </div>
+
+        <!-- Детали по саунд-дизайну -->
+        <div class="service-details" id="sound_design">
+            <h3>САУНД-ДИЗАЙН</h3>
+            <div class="service-price">ОТ 2 500 ₽</div>
+            <div class="service-time">Срок: 2-7 дней</div>
+            <ul class="service-features">
+                <li>Звуковые эффекты для игр</li>
+                <li>UI звуки и интерактивный звук</li>
+                <li>Атмосферные эмбиент-дорожки</li>
+                <li>Звуковое сопровождение видео</li>
+                <li>Дизайн уникальных звуков</li>
+                <li>Имплементация в движки</li>
+            </ul>
+            <div class="contact-details">
+                <p>> Форматы: WAV, OGG, MP3</p>
+                <p>> ПО: Reaper, FMOD, Wwise</p>
+            </div>
+        </div>
+
+        <!-- Детали по визуальным эффектам -->
+        <div class="service-details" id="visual_effects">
+            <h3>ВИЗУАЛЬНЫЕ ЭФФЕКТЫ</h3>
+            <div class="service-price">ОТ 4 000 ₽</div>
+            <div class="service-time">Срок: 4-12 дней</div>
+            <ul class="service-features">
+                <li>Создание VFX для видео и игр</li>
+                <li>Частицы, жидкости, взрывы</li>
+                <li>Динамика тканей и волос</li>
+                <li>Симуляция разрушений</li>
+                <li>Композитинг и пост-обработка</li>
+                <li>Интеграция в реальные съёмки</li>
+            </ul>
+            <div class="contact-details">
+                <p>> Форматы: EXR, PNG, MP4</p>
+                <p>> ПО: Blender, After Effects, Nuke</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-section">
+        <h2>> КОНТАКТЫ</h2>
+        <div class="contact-details">
+            <p>> EMAIL: lohdealen@gmail.com</p>
+            <p>> TELEGRAM: @AlenDeLoh</p>
+            <p>> ФОРМАТ: Удалённая работа, фриланс</p>
+            <p>> ОТВЕТ: В течение 24 часов</p>
+        </div>
+    </div>
+
+    <script>
+        // Функция для показа деталей услуги
+        function showServiceDetails(serviceId) {
+            // Скрываем все блоки с деталями
+            var allDetails = document.querySelectorAll('.service-details');
+            allDetails.forEach(function(detail) {
+                detail.classList.remove('active');
+            });
+            
+            // Показываем выбранный блок
+            if (serviceId) {
+                var selectedDetail = document.getElementById(serviceId);
+                if (selectedDetail) {
+                    selectedDetail.classList.add('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
