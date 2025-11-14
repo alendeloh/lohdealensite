@@ -46,7 +46,7 @@
             padding-bottom: 10px;
         }
         
-        /* Стили для выпадающего списка */
+  
         .services-selector {
             margin: 15px 0;
         }
@@ -153,7 +153,7 @@
             </div>
         </div>
 
-        <!-- Детали по 3D моделированию -->
+
         <div class="service-details" id="3d_modeling">
             <h3>3D МОДЕЛИРОВАНИЕ</h3>
             <div class="service-price">ОТ 5 000 ₽</div>
@@ -172,7 +172,7 @@
             </div>
         </div>
 
-        <!-- Детали по 3D анимации -->
+
         <div class="service-details" id="3d_animation">
             <h3>3D АНИМАЦИЯ</h3>
             <div class="service-price">ОТ 8 000 ₽</div>
@@ -191,7 +191,7 @@
             </div>
         </div>
 
-        <!-- Детали по музыкальной продюссии -->
+
         <div class="service-details" id="music_production">
             <h3>МУЗЫКАЛЬНАЯ ПРОДУКЦИЯ</h3>
             <div class="service-price">ОТ 3 000 ₽</div>
@@ -210,7 +210,7 @@
             </div>
         </div>
 
-        <!-- Детали по саунд-дизайну -->
+
         <div class="service-details" id="sound_design">
             <h3>САУНД-ДИЗАЙН</h3>
             <div class="service-price">ОТ 2 500 ₽</div>
@@ -229,7 +229,7 @@
             </div>
         </div>
 
-        <!-- Детали по визуальным эффектам -->
+
         <div class="service-details" id="visual_effects">
             <h3>ВИЗУАЛЬНЫЕ ЭФФЕКТЫ</h3>
             <div class="service-price">ОТ 4 000 ₽</div>
@@ -261,7 +261,7 @@
     </div>
 
     <script>
-        // Функция для показа деталей услуги
+
         function showServiceDetails(serviceId) {
             // Скрываем все блоки с деталями
             var allDetails = document.querySelectorAll('.service-details');
@@ -269,7 +269,7 @@
                 detail.classList.remove('active');
             });
             
-            // Показываем выбранный блок
+
             if (serviceId) {
                 var selectedDetail = document.getElementById(serviceId);
                 if (selectedDetail) {
